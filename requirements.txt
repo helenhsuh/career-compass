@@ -1,4 +1,1 @@
-numpy
-pandas
-scikit-learn
-sentence-transformers
+delete this txt
