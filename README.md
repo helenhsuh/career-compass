@@ -85,6 +85,43 @@ career-compass/
 └── README.md
 
 
+## How to Navigate This Repo
+
+Career Compass is organized to reflect the full reasoning and architecture behind the project, even without a real dataset. If you're exploring the repository, here’s the best way to understand how everything fits together:
+
+### 1. Start with the `docs/` folder  
+This is the conceptual foundation of the project. It includes:
+- project_overview.md – purpose and vision  
+- data_design.md – schema planning and data assumptions  
+- feature_engineering.md – baseline and embedding reasoning  
+- modeling_approach.md – similarity and ranking design  
+- evaluation_plan.md – hybrid evaluation strategy  
+- limitations_and_future_work.md – constraints and next steps  
+- ethical_considerations.md – fairness, transparency, and user agency  
+
+### 2. Explore the `notebooks/` directory  
+These notebooks walk through the reasoning process step by step:
+- data design  
+- baseline feature engineering  
+- embedding exploration  
+- similarity scoring  
+- evaluation planning  
+
+### 3. Review the `src/` directory  
+This is the code scaffolding for future development:
+- data/ – preprocessing and schema logic  
+- features/ – TF‑IDF and embedding feature modules  
+- models/ – baseline and embedding similarity modules  
+- evaluation/ – metrics and human‑review design  
+- utils/ – shared helpers and configuration  
+
+### 4. Check the `tests/` folder  
+These starter tests reflect engineering best practices.
+
+### 5. Look at `requirements.txt` and `CONTRIBUTING.md`  
+These outline dependencies and collaboration guidelines.
+
+This structure is designed to demonstrate engineering thinking, ML reasoning, and human‑centered design, while keeping the project ready for future development.
 ---
 
 ## 🔧 Technical Foundations Demonstrated
