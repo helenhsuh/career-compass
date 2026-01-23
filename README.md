@@ -1,109 +1,157 @@
-Career Compass — AI‑Assisted Career Transition Tool
-A conceptual machine learning project exploring how AI can support equitable, human‑centered career transitions.
+# Career Compass: AI-Assisted Career Pivot Reasoning Tool
 
-📌 Overview
-Career Compass is a conceptual AI/ML project designed to help people navigate career transitions by identifying aligned roles, transferable skills, and realistic pathways based on their background, values, and real‑life constraints.
-This project reflects my lived experience supporting young adults, mid‑career professionals, and individuals balancing dependents, caregiving responsibilities, or lifestyle limitations. It also represents my early technical exploration into embeddings, clustering, NLP, and responsible model design.
-This repository documents my thinking, research, and structured approach to building an inclusive, ethical, and human‑centered AI system — even as I continue developing my technical skills.
+Career Compass is a human-centered AI project designed to help individuals navigate complex career transitions with clarity and structure. The tool blends counseling-informed reasoning with foundational machine learning concepts to help users understand role alignment, transferable skills, and long-term career fit.
 
-🎯 Project Goals
-• 	Support users navigating career transitions at any life stage
-• 	Translate skills, experiences, and constraints into actionable pathways
-• 	Explore how AI can provide transparent, ethical recommendations
-• 	Build foundational understanding of ML workflows, including:
-• 	Data preparation
-• 	Feature considerations
-• 	Embeddings
-• 	Clustering
-• 	NLP for interpreting user inputs
-• 	Evaluation thinking
+This repository reflects the full design and architecture of the project, including data preparation planning, feature engineering reasoning, baseline modeling approaches, evaluation strategies, and iterative experimentation. While no real dataset was used, the project is structured to support real development in the future.
 
-🧠 Why This Project Matters
-Career decisions shape financial stability, family well‑being, and long‑term opportunity. Many people — especially mid‑career adults — face constraints such as:
-• 	Dependents
-• 	Caregiving responsibilities
-• 	Limited relocation flexibility
-• 	Financial pressures
-• 	Skill gaps
-• 	Burnout or career stagnation
-Career Compass is designed to acknowledge these realities and offer guidance that is practical, empathetic, and grounded in real‑world constraints.
+---
 
-🔍 Project Structure
+## 🌟 Project Purpose
+
+Career transitions are overwhelming. Job descriptions are inconsistent, skills are hard to compare, and people often lack access to personalized guidance. Career Compass aims to:
+
+- Provide structured, accessible support for career pivots  
+- Identify alignment between user backgrounds and potential roles  
+- Surface transferable skills and realistic next-step pathways  
+- Model trade-offs across skills, salary, location, and constraints  
+- Demonstrate foundational ML reasoning and problem-solving  
+
+---
+
+## 🧠 Problem Definition
+
+People need a way to understand which roles align with their skills, values, constraints, and long-term goals. Career Compass is designed to:
+
+- Standardize role information  
+- Represent user profiles and job descriptions in comparable formats  
+- Rank roles based on alignment and user-defined priorities  
+- Provide interpretable, human-centered recommendations  
+
+---
+
+## 🏗️ Repository Structure
+
 career-compass/
 │
+├── data/
+│   ├── raw/                  # Unprocessed job descriptions, skills, taxonomies
+│   ├── interim/              # Cleaned but not yet structured
+│   └── processed/            # Final structured data ready for modeling
+│
 ├── notebooks/
-│   ├── 01_problem_definition.ipynb
-│   ├── 02_data_inputs_and_features.ipynb
-│   ├── 03_embeddings_and_similarity.ipynb
-│   ├── 04_clustering_role_patterns.ipynb
-│   ├── 05_nlp_user_input_exploration.ipynb
-│   └── 06_evaluation_and_next_steps.ipynb
+│   ├── 01_data_design.ipynb
+│   ├── 02_feature_engineering_baselines.ipynb
+│   ├── 03_embeddings_exploration.ipynb
+│   ├── 04_similarity_and_ranking.ipynb
+│   └── 05_evaluation_strategy.ipynb
+│
+├── src/
+│   ├── data/
+│   │   ├── data_design.py            # Schema definition and data planning
+│   │   └── preprocessing.py          # Text normalization and cleaning utilities
+│   │
+│   ├── features/
+│   │   ├── tfidf_features.py         # Baseline TF‑IDF vectorization
+│   │   └── embedding_features.py     # Embedding feature scaffolding
+│   │
+│   ├── models/
+│   │   ├── baseline_similarity.py    # Cosine similarity ranking
+│   │   └── embedding_similarity.py   # Embedding‑based similarity design
+│   │
+│   ├── evaluation/
+│   │   ├── metrics.py                # Semantic similarity and clustering metrics
+│   │   └── human_review.py           # Human‑in‑the‑loop evaluation design
+│   │
+│   └── utils/
+│       ├── helpers.py                # Shared helper functions
+│       └── config.py                 # Configuration settings
 │
 ├── docs/
 │   ├── project_overview.md
-│   ├── ethical_considerations.md
-│   ├── user_personas.md
-│   └── roadmap.md
+│   ├── data_design.md
+│   ├── feature_engineering.md
+│   ├── modeling_approach.md
+│   ├── evaluation_plan.md
+│   ├── limitations_and_future_work.md
+│   └── ethical_considerations.md
 │
+├── tests/
+│   ├── test_preprocessing.py
+│   ├── test_similarity.py
+│   └── test_embeddings.py
+│
+├── requirements.txt
+├── CONTRIBUTING.md
 └── README.md
-Each notebook is conceptual and focuses on reasoning, structure, and methodology, not production‑ready code.
 
-🛠️ Technical Concepts Explored
-1. Data Preparation
-• 	Identifying relevant inputs: skills, work history, values, constraints
-• 	Structuring user profiles
-• 	Mapping skills to standardized taxonomies
-2. Feature Considerations
-• 	Skill similarity
-• 	Transferability
-• 	Constraints (dependents, caregiving, relocation, finances)
-• 	Values and work preferences
-3. Embeddings (Foundational)
-• 	How embeddings represent skills and roles
-• 	Why similarity matters in career recommendations
-4. Clustering (Foundational)
-• 	Grouping similar roles
-• 	Identifying patterns in career trajectories
-5. NLP (Foundational)
-• 	Interpreting user inputs
-• 	Extracting skills and preferences from text
-6. Evaluation Thinking
-• 	Fairness
-• 	Transparency
-• 	Usability
-• 	Avoiding over‑confidence in recommendations
 
-🤝 My Contributions
-This is an independent project. I contributed to:
-• 	Problem definition
-• 	Research and conceptual design
-• 	Data schema and feature planning
-• 	Exploration of embeddings, clustering, and NLP
-• 	Ethical framework
-• 	Documentation and roadmap
+---
 
-📈 Challenges & What I Learned
-• 	Translating human complexity into structured data
-• 	Understanding how embeddings capture similarity
-• 	Thinking through fairness and transparency
-• 	Balancing technical ambition with beginner‑level skills
-• 	Designing for users with real‑world constraints
-This project strengthened my ability to think like an engineer: breaking down problems, structuring solutions, documenting assumptions, and planning next steps.
+## 🔧 Technical Foundations Demonstrated
 
-🚀 Next Steps
-If I continue this project, I plan to:
-• 	Build a prototype recommendation engine
-• 	Integrate real career trajectory datasets
-• 	Test with users across life stages
-• 	Evaluate model performance and fairness
-• 	Explore explainability techniques
+### **Data Thinking**
+- Schema design  
+- Planning for normalization, deduplication, labeling  
+- Understanding what “clean data” means in ML contexts  
 
-📬 Contact
-Helen Suh
-Email: helen.suh@gmail.com
-LinkedIn: (39) Helen Suh | LinkedIn
-🗂️ How to Navigate This Repo
-• 	Start with 
-• 	Then explore the notebooks in order
-• 	Review  for the guiding principles
-• 	Check  for future development plans
+### **Feature Engineering**
+- TF‑IDF baseline  
+- Cosine similarity  
+- Transformer-based embedding design  
+- Trade-offs between interpretability and performance  
+
+### **Modeling Reasoning**
+- Why baselines matter  
+- When embeddings are appropriate  
+- How to compare models  
+- How to evaluate without labels  
+
+### **Evaluation Strategy**
+- Hybrid metrics + human review  
+- Clustering coherence  
+- Counseling-informed interpretability  
+
+---
+
+## 🧪 Challenges & How They Were Overcome
+
+- **No dataset available** → Designed full pipeline with synthetic examples  
+- **Knowledge gaps in embeddings** → Used documentation, small experiments, and AI assistants  
+- **Unclear evaluation without labels** → Designed hybrid evaluation strategy  
+- **AI assistants giving incorrect code** → Verified, discarded, and corrected through reasoning  
+
+---
+
+## 🤖 Use of AI Coding Assistants
+
+AI tools were used to:
+- Scaffold code structure  
+- Debug syntax issues  
+- Visualize vector similarity concepts  
+
+AI tools were *not* blindly trusted.  
+Incorrect outputs were discarded and replaced with documented reasoning.
+
+---
+
+## 🚀 Future Work
+
+- Collect real datasets  
+- Build an API for role matching  
+- Add user feedback loops  
+- Integrate salary/location trade-off modeling  
+- Create a dashboard for skill-gap analysis  
+
+---
+
+## 🧭 Why This Project Matters
+
+Career Compass reflects:
+- Human-centered design  
+- Ethical reasoning  
+- Data-driven thinking  
+- ML conceptual understanding  
+- Problem decomposition  
+- Responsible use of AI  
+
+It is intentionally designed to grow into a real product while demonstrating the engineering mindset required for the REACH apprenticeship.
