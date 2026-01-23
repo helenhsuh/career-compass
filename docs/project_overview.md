@@ -1,3 +1,9 @@
+# Project Overview
+
+Career Compass is an AI-assisted reasoning tool designed to help individuals navigate career transitions. The project blends counseling-informed frameworks with foundational machine learning concepts to create structured, interpretable recommendations.
+
+This document provides a high-level overview of the system architecture, design goals, and intended user experience.
+
 # Career Compass — Project Overview
 
 Career Compass is a conceptual AI/ML system designed to help users navigate career transitions by identifying aligned roles, transferable skills, and realistic pathways based on their background, values, and real-life constraints. The project reflects my lived experience supporting young adults and mid-career adults through career decisions, as well as my growing technical foundation in data analysis, NLP, embeddings, and clustering.
@@ -28,3 +34,5 @@ Career transitions are deeply personal and often shaped by factors such as depen
 - Ability to break down complex systems into components
 
 This project is ongoing and will evolve as I deepen my technical skills.
+
+
